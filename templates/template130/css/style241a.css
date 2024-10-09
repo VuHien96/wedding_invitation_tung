@@ -1,0 +1,757 @@
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #fff;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #c9b5b6;
+}
+
+body {
+  font-family: 'Bellota Text', cursive;
+}
+
+/* .section-bg-affect:nth-child(even) {
+  background-color: #f8f2f2;
+} */
+.section-bg-affect {
+  background-color: #f6f1f3;
+}
+.story-section .timeline-card::before {
+  border-color: #c9b5b6;
+}
+
+.story-section .timeline .title::before {
+  border-color: #c9b5b6;
+}
+
+.story-section .timeline-1 li {
+  border-left-color: #c9b5b6;
+}
+
+.story-section .timeline-1 li:before {
+  border-color: #c9b5b6;
+  box-shadow: 3px 3px 0px #c9b5b6;
+}
+
+.donate-section .donate-box .donate-card {
+  width: 100%;
+ 
+}
+.donate-card.p-4.rounded.text-center {
+  border: 1px dashed #c9b5b6;
+}
+.donate-section .donate-box .donate-card p:last-child {
+  margin-bottom: 0 !important;
+}
+
+.donate-section .donate-box .donate-card .qr-code-image {
+  max-width: 150px;
+  display: block;
+  cursor: zoom-in;
+}
+.donate-modal {
+  display: none; 
+  position: fixed;
+  z-index: 199;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0,0,0)!important;
+  background-color: rgba(0,0,0,0.5)!important;
+}
+.donate-modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  width: 90%;
+  max-width: 750px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  -webkit-animation-name: animatetopfordonatemodal;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatetopfordonatemodal;
+  animation-duration: 0.4s
+}
+@-webkit-keyframes animatetopfordonatemodal {
+  from {top:-300px; opacity:0} 
+  to {top:0; opacity:1}
+}
+@keyframes animatetopfordonatemodal {
+  from {top:-300px; opacity:0}
+  to {top:0; opacity:1}
+}
+.donate-modal strong, .donate-modal h3{font-family:inherit!important;}
+.donate-modal-close {color: red;font-size: 28px;font-weight: bold;text-decoration: none;cursor: pointer;position: absolute;right: 15px;z-index: 999;}
+.donate-modal-header {padding: 8px 16px;background-color: #f23b43;color: #fff;font-size:30px;text-align:center;line-height: 40px;}
+.donate-modal-header strong{display:flex;align-items:center;justify-content: center;flex-wrap: wrap;color:#fff;}
+
+.donate-modal-header strong span{margin-left:10px;}
+.donate-modal-body {padding: 0 15px;}
+/* .donate-box{display: flex;justify-content: space-evenly;flex-wrap: wrap;} */
+.donate-box .donate-card:hover{box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);}
+.donate-box .donate-card h3{padding:0;margin:0;margin-bottom: 20px;font-weight: bold;font-size: 18px;line-height: 30px;}
+.donate-box .donate-card p {margin: 10px 0!important;font-size: 16px;}
+.donate-box .donate-card p:last-child {margin-bottom:0!important;}
+@media (max-width: 699px) {
+.donate-box .donate-card{width:100%;}
+.donate-wrap{
+  width: 100%;
+}
+.qr-code-image {
+  max-width: 200px;
+}
+}
+.donate-box .donate-card {position:relative;}
+.donate-box .donate-card .qr-code-image{max-width: 150px;border: 1px solid #ccc;padding: 3px;margin: auto;display: block;cursor: zoom-in;}
+.donate-box .cryptos-box .cryptos-items {display: flex;flex-wrap: wrap;justify-content: center;margin-right: -10px;margin-left: -10px;margin-top: 10px;}
+.donate-box .cryptos-box .cryptos-items .crypto-item {padding:10px 10px 0;}
+.donate-box .cryptos-box .cryptos-items .crypto-item img {width:30px;max-width:100%;min-width:35px;cursor:pointer;}
+.donate-box .cryptos-box-view {display:none;position: absolute;top: 0;left: 0;background: #ffffff;width: 100%;height: 100%;border-radius: 7px;padding:10px;text-align: center;}
+.donate-box .cryptos-box-view h5 {font-weight: bold;font-size: 18px;display: flex;align-items: center;justify-content: center;margin-bottom: 15px;}
+.donate-box .cryptos-box-view h5 img{width:25px;}
+.donate-box .cryptos-box-view h5 .coin-img {margin-right: 5px;}
+.donate-box .cryptos-box-view h5 .coin-id {margin-left: 5px;}
+.donate-box .cryptos-box-view .coin-address {display: block;padding: 10px;background: #ffe2e4;margin-bottom: 15px;word-break: break-word;color: #201f1f;}
+.donate-box .cryptos-box-view .cryptos-box-view-close {margin-top: 15px;background: #f23b43;color: #fff;padding: 5px 15px;border-radius: 5px;border: 1px solid #e3252d;}
+.donate-box .cryptos-box-view .cryptos-box-view-close:hover{background: #e3252d;}
+
+header .navbar-brand {
+  font-size: 20px;
+}
+
+.offcanvas-menu li {
+  position: relative;
+}
+
+.offcanvas-menu li:after {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  border: 1px solid #c9b5b6;
+}
+
+.offcanvas-menu .nav-link {
+  font-family: "Texturina", serif;
+  font-size: 1.2rem;
+  text-transform: capitalize;
+}
+
+.section-title {
+  font-family: "Great Vibes", cursive;
+  font-size: 2.5rem;
+  color: #5b595a;
+}
+
+.section-sub-title {
+  font-family: 'Bellota Text', cursive;
+}
+
+.title {
+  font-family: 'Bellota Text', cursive;
+}
+
+.sub-title {
+  font-family: 'Bellota Text', cursive;
+}
+
+/* Banner Section */
+.main_area {
+  background: #f6f1f3;
+}
+.banner-section .bgm_area {
+  background-color: #d6c3ca;
+  border-bottom: 1px solid #d6c3ca;
+  color: #fff;
+}
+.main_area .invitation_day {
+  color: #393939;
+  letter-spacing: 1px;
+  font-size: 1.5rem;
+}
+.main_area .date {
+  color: #a88290;
+  font-size: 2rem;
+}
+.main_area .invitation_place,
+.main_area .date-time {
+  color: #a88290;
+  letter-spacing: 1px;
+  font-size: 1.5rem;
+}
+.day_area_inner {
+  font-size: 5rem;
+  font-style: italic;
+  letter-spacing: 1px;
+  color: #919191;
+  line-height: 60px;
+  font-family: "Baloo Paaji 2", cursive;
+}
+.day_area_inner > img {
+  width: 40px;
+  margin-left: 10px;
+  vertical-align: middle;
+}
+.main_area .main_image_area {
+  position: relative;
+}
+.main_area .main_image_wrapper {
+  position: absolute;
+  left: 0;
+  top: -30px;
+  z-index: 10;
+}
+.main_area .wrap-img > img {
+  width: 80%;
+  border-radius: 50%;
+}
+.main_area .main_image_area .wrap-img {
+  position: relative;
+}
+.main_area .wedding_area {
+  color: #1c1c1c;
+  font-size: 1.8em;
+  line-height: 1;
+  letter-spacing: 3px;
+}
+.main_area .wedding_area .save-date {
+  color: #896f53;
+  font-size: 1rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  line-height: 1;
+}
+.main_area .wedding_area .wrap-name {
+  font-size: 2.5rem;
+  color: #a88290;
+}
+.main_area .wedding_area .wrap-name span:nth-child(2) {
+  font-size: 1.5rem;
+}
+.main_area .main_title .p {
+  font-size: 1.5rem;
+}
+.main_area .married {
+  color: #a88290;
+  text-align: center;
+  font-size: 1.5rem;
+  letter-spacing: 2px;
+}
+/* accessibility-btn */
+
+.accessibility-btn {
+  background-color: #c9b5b6;
+  border: none;
+}
+
+.accessibility-btn:hover {
+  opacity: 0.6 !important;
+  background-color: #c9b5b6;
+  border: none;
+}
+
+/* video-section */
+
+.video-section iframe {
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+/* gallery-section */
+#btn-see-more-gallery{
+  border-radius: 50px;
+  padding: 12px 24px;
+}
+.gallery-section .btn-secondary.btn-see-more-gallery {
+  background: #c9b5b6;
+  border-color: #fff;
+}
+.gallery-item{
+  cursor: pointer;
+}
+.lg-backdrop, .lg-outer{
+  z-index: 9999999;
+}
+
+/* weddingdate-section */
+.weddingdate-section .main_dday_name {
+  display: inline-block;
+  text-align: center;
+  font-size: 1.4em;
+  border-bottom: 1px solid #c8c8c8;
+}
+.weddingdate-section .mini_calendar .calendar-month,
+.weddingdate-section .mini_calendar table th {
+  color: #bababa;
+}
+.weddingdate-section .mini_calendar table th {
+  color: #c19fad;
+}
+.weddingdate-section .mini_calendar .calendar-month {
+  font-weight: bold;
+  color: #c19fad;
+}
+.weddingdate-section #clock > div {
+  color: #5b595a;
+}
+
+.weddingdate-section .wrap-img {
+  text-align: center;
+  color: #866e69;
+  font-size: 14px;
+}
+
+.weddingdate-section .day,
+.weddingdate-section .time {
+  color: #866e69;
+  font-size: 45px;
+  text-align: center;
+}
+
+.weddingdate-section .wrap-img img {
+  width: 50px;
+}
+
+.weddingdate-section .mini_calendar td {
+  color: #c19fad;
+}
+
+
+.weddingdate-section .countdown .box {
+  color: #c19fad !important;
+}
+
+.weddingdate-section .mini_calendar table th {
+  border-top: 1px solid #c6c6c6;
+  border-bottom: 1px solid #c6c6c6;
+}
+.mini_calendar> .mini_calendar {
+  border-bottom: 1px solid #c6c6c6;
+  padding-bottom: 20px;
+}
+/* story-section */
+
+.story-section .timeline .title {
+  color: #c9b5b6;
+}
+
+.timeline-card .img-holder {
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.invitation-couple p {
+  color: #a88290;
+  font-size: 2rem;
+}
+.invitation-couple .text {
+  align-items: center;
+  gap: 10px;
+  align-items: baseline;
+}
+.invitation-couple .text small {
+  font-size: 1rem;
+}
+.invitation-section .couple-img {
+  overflow: hidden;
+}
+.invitation-section .invitation-parent {
+  color: #a88290;
+}
+.invitation-section .wrap-invitation .title-big {
+  color: #fff;
+  font-size: 3rem;
+}
+.invitation-section .wrap-invitation .title-small {
+  position: relative;
+}
+.invitation-section .wrap-invitation .title-small p {
+  position: absolute;
+  margin: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 6px;
+  color: #fff;
+}
+.invitation-section .wrap-invitation .title-small img {
+  width: 250px;
+}
+.wrap-invitation .text-desc {
+  font-size: 1.5rem;
+  color: #a88290;
+}
+
+.invitation-section .invitation-content  {
+  text-align: center;
+  color: #a88290;
+}
+.invitation-section .wrap-name {
+  align-items: center;
+  color: #866e69;
+  font-weight: bold;
+}
+
+.invitation-section .wrap-name i {
+  color: #fff;
+}
+
+.invitation-section .city {
+  color: #fff;
+  background-image: url("../../../img/tree-2.html");
+  background-position: left bottom;
+  background-repeat: no-repeat;
+  background-size: 80px;
+  width: 80px;
+  text-align: center;
+}
+
+.invitation-section .invitation-parent {
+  font-size: 24px;
+}
+
+/* couple section */
+.couple-section .wrap-people {
+  overflow: hidden;
+  gap: 25px;
+  justify-content: space-between;
+}
+.couple-section .wrap-people .member {
+  width: 50%;
+}
+.couple-section .wrap-people .member img {
+  width: 100%;
+}
+.couple-section .wrap-people .member-name {
+  text-align: center;
+  margin: 0 auto;
+  width: 70%;
+  background: url("../img/groombride_bg.png")
+    no-repeat left bottom;
+  background-size: contain;
+  font-size: 20px;
+}
+.couple-section .wrap-people .member-contact {
+  justify-content: center;
+  gap: 10px;
+}
+.couple-section .wrap-people .member-contact li {
+  line-height: 20px;
+}
+.couple-section .member-contact li a {
+  font-size: 20px;
+  display: inline-block;
+  color: #cfb2b7;
+}
+@media screen and (max-width: 450px){
+  .couple-section .wrap-people{
+    flex-direction: column;
+  }
+  .member-groom, .member-bride{
+    margin: 0 auto;
+  }
+  .couple-section .wrap-people .member{
+    width: 100%;
+  }
+}
+
+/* event-section */
+
+.event-section .event-item {
+  background-color: #ecd9d9 !important;
+}
+/* people-section */
+
+.people-section .rounded-circle {
+  overflow: hidden;
+}
+.people-section a {
+  color: #5b595a;
+}
+/* wishes-section */
+
+.wish-box {
+  border-color: #5b595a;
+}
+.wishes-section button,
+.event-section a {
+  background-color: #c9b5b6;
+  border: none;
+  transition: 0.2s;
+  color: #fff;
+}
+
+.wishes-section button:hover,
+.event-section a:hover {
+  opacity: 0.6 !important;
+  background-color: #eeaaba !important;
+  border: none !important;
+}
+
+/* donate-section */
+
+.donate-section .donate-card {
+  background: #fff;
+}
+
+.donate-card .sub-title {
+  color: #5b595a;
+  font-size: 1.3rem;
+}
+
+/* footer-section */
+
+.footer-section .title {
+  color: #5b595a;
+  font-size: 2.6em;
+}
+
+.footer-section .sub-title {
+  font-size: 1.2em;
+}
+
+.main_area .text-and {
+  padding: 0 10px;
+}
+
+@media (max-width: 375px) {
+  .main_area .main_title {
+    bottom: -29px;
+  }
+  .main_area .wedding_area {
+    font-size: 1.5rem;
+  }
+  .main_area .wedding_area .title {
+    font-size: 1.5rem;
+  }
+  .main_area .wedding_area .wrap-name span:nth-child(2) {
+    font-size: 1rem;
+  }
+  .main_area .invitation_place,
+  .main_area .date-time {
+    font-size: 1rem;
+  }
+  .day_area_inner {
+    font-size: 4rem;
+  }
+  .couple-section .member .color-w {
+    font-size: 20px;
+  }
+  .invitation-section .invitation-common-wrapper {
+    font-size: 25px;
+  }
+  .couple-section .wrap-people {
+    gap: 5px;
+  }
+  .couple-section .wrap-contact .contact {
+    font-size: 18px;
+  }
+  .couple-section .member a {
+    font-size: 22px;
+  }
+  .couple-section .wrap-people .member-name {
+    font-size: 20px;
+  }
+  .invitation-section .wrap-invitation .title-big {
+    font-size: 2rem;
+  }
+  .invitation-couple span {
+    font-size: 0.5rem;
+  }
+  .invitation-couple p {
+    font-size: 1.2rem;
+  }
+  .invitation-section .invitation-parent {
+    font-size: 1rem;
+  }
+  .wrap-invitation .text-desc {
+    font-size: 1rem;
+  }
+  .invitation-section .invitation-content {
+    font-size: 16px !important;
+    line-height: 30px !important;
+  }
+  .invitation-section .invitation-content p {
+    margin-bottom: 0;
+  }
+}
+/*new form*/
+#wish-form {
+  background-color: #ECD9D9;
+}
+button#btn-submit-comment {
+  background-color: #CFB2B7;
+  color: white;
+  text-transform: uppercase;
+}
+button#btn-submit-comment:hover {
+  background-color: #eeaaba;
+}
+#show-comments {
+  background-color: #ECD9D9;
+}
+.box-comment {
+  background-color: white;
+}
+.reply-comment-box {
+  border-top: 1px dashed  #eeaaba;
+}
+.bride-story, .groom-story{
+	font-family:'Bellota Text', cursive;
+}
+.bride-story>a, .groom-story>a{
+	color:gray!important;
+}
+.text-story{
+    overflow: hidden;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+}
+.invitation-groom-parent {
+  font-family: 'Bellota Text', cursive;
+  font-size: 15px;
+}
+.parent-name{
+  font-weight: bold;
+}
+
+.emoji-picker{max-width:100%;display:none;position: absolute;user-select: none!important;background: #fff;right: 0px;z-index: 9999;bottom: -355px;-webkit-box-shadow: 0 1px 2px 0 rgb(60 64 67 / 35%), 0 2px 6px 2px rgb(60 64 67 / 35%);box-shadow: 0 1px 2px 0 rgb(60 64 67 / 35%), 0 2px 6px 2px rgb(60 64 67 / 35%);border-radius: 0.5rem;overflow: hidden;}
+.emoji-picker > emoji-picker{--emoji-size:22px;}
+@media screen and (max-width: 400px){
+  .emoji-picker > emoji-picker{ --num-columns: 6;}
+}
+#wish-form textarea:focus {box-shadow: none;}
+#wish-form textarea{margin-bottom:0;border-radius:0!important;resize: none;}
+#wish-form .textAreaIcons{position:relative;text-align:right;background: #fff;padding: 10px;border-top: none;border-top: 1px solid #f3f1f1;}
+#wish-form .textAreaIcons span{color: #333;cursor:pointer;margin-right:4px;}
+.tooltip{ width: 160px;}
+.tooltip .tooltip-inner{padding: 8px 12px;font-size: 16px;}
+#wish-form .wishes-autocomplete-content{position: absolute;top: 50px;width: 100%;left: 0;z-index: 333;background: #fff;-webkit-box-shadow: 0 1px 2px 0 rgb(60 64 67 / 35%), 0 2px 6px 2px rgb(60 64 67 / 35%);box-shadow: 0 1px 2px 0 rgb(60 64 67 / 35%), 0 2px 6px 2px rgb(60 64 67 / 35%);}
+#wish-form .wishes-autocomplete-content input{
+	background-image: url('../../../../cdn.biihappy.com/ziiweb/images/static/common/searchicon.png')!important;
+	background-position: 10px!important;
+	background-repeat: no-repeat!important;
+	width: 100%!important;
+	font-size: 16px!important;
+	padding: 12px 20px 12px 40px!important;
+	border: 1px solid #ddd!important;
+	margin-bottom: 0!important;
+	border-radius:0!important;
+}
+#wish-form .wishes-autocomplete-content ul{list-style-type: none;margin: 0;padding: 0;max-height: 300px;overflow: auto;display: block;height: auto;text-align:left;}
+#wish-form .wishes-autocomplete-content ul li a {
+	border: 1px solid #ddd!important;
+	margin-top: -1px!important;
+	padding: 12px!important;
+	text-decoration: none!important;
+	font-size: 15px!important;
+	color: black!important;
+	display: block!important;
+}
+#wish-form .wishes-autocomplete-content ul li a:hover{background-color: #eee!important;}
+#wish-form .tooltip-custom {
+	position: relative;
+	display: inline-block;
+}
+
+/* dresscode */
+.event-section .dresscode-colors-event{
+  position: relative;
+	display: flex;
+	align-items: center;
+	gap: 4px;
+	background: rgb(246 246 246 / 70%);
+	padding: 4px;
+	width:36%;
+	justify-content: center;
+}
+.event-section .dresscode-colors-event > .dresscode-colors-item{
+	border-radius: 50%;
+	width: 25px;
+	height: 25px;
+}
+.event-section .dresscode-colors-wrap{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+.event-section .event-item:hover .tooltip-dresscode{
+  display: block;
+}
+.event-section .event-item .tooltip-dresscode {
+	width: 130px;
+  font-family: sans-serif; 
+	font-size: 14px;
+  background-color: rgb(255 255 255);
+  border: 1px solid #eee;
+  color: #000;
+  box-shadow: 0 .125rem .25rem rgba(0,0,0,.075)!important;
+	text-align: center;
+	border-radius: 6px;
+	padding: 5px 0;
+	position: absolute;
+	z-index: 1;
+  bottom: 40px;
+  display: none;
+}
+.event-section .event-item .tooltip-dresscode::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: rgb(255 255 255) transparent transparent transparent;
+}
+@media (max-width:449px){
+  .event-section .dresscode-colors-event{width: 100%!important;gap: 10px!important;}
+	.event-section .dresscode-colors-wrap{bottom: 189px!important;}
+}
+.contact-validation-active .error-handling-messages {
+  width: 100% !important;
+  margin-top: 15px !important;
+}
+
+.contact-validation-active #success,
+.contact-validation-active #c-success,
+.contact-validation-active #c-error,
+.contact-validation-active #error {
+width: 100%;
+color: #fff;
+padding: 5px 10px;
+font-size: 16px;
+text-align: center;
+display: none;
+}
+@media (max-width: 767px) {
+.contact-validation-active #success,
+.contact-validation-active #c-success,
+.contact-validation-active #c-error,
+.contact-validation-active #error {
+  font-size: 15px;
+}
+}
+.contact-validation-active #c-success,
+.contact-validation-active #success {
+background-color: #009a00;
+border-left: 5px solid green;
+margin-bottom: 5px;
+}
+.contact-validation-active #c-error,
+.contact-validation-active #error {
+background-color: #ff1a1a;
+border-left: 5px solid red;
+}
