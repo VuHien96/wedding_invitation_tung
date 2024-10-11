@@ -38,34 +38,6 @@
     -------------------------------------------*/
     if ($("#wish-form").length) {
         $("#wish-form").validate({
-            rules: {
-                name: {
-                    required: true,
-                    minlength: 5
-                },
-                content: {
-                    required: true,
-                    minlength: 10
-                },
-                email: {
-                    required: false,
-                    email: true
-                },
-            },
-
-            messages: {
-                name: {
-                    required: '<span style="color:red;">Vui lòng nhập tên của bạn.</span>',
-                    minlength: '<span style="color:red;">Tên phải lớn hơn 5 ký tự.</span>',
-                },
-                content: {
-                    required: '<span style="color:red;">Vui lòng nhập lời chúc.</span>',
-                    minlength: '<span style="color:red;">Lời chúc phải lớn hơn 10 ký tự.</span>',
-                },
-                email: {
-                    email: '<span style="color:red;">Địa chỉ email không hợp lệ.</span>'
-                }
-            },
 
             errorPlacement: function(error, element) {
                 if (element.attr("name") == "content" ) {
@@ -76,36 +48,36 @@
             },
             submitHandler: function (form) {
                 $("#loader").css("display", "inline-block");
-                $.ajax({
-                    type: "POST",
-                    url: "/wish",
-                    data: $(form).serialize(),
-                    success: function (res) {
-                        $( "#loader").hide();
-                        if(!res.error){
-                            $('#show-comments').scrollTop(0);
-                            $('#show-comments').prepend('<div class="box-comment p-3 mb-3"><h4 id="user-name-comment">'+$(form).find("input[name='name']").val().replace(/&/g, "&amp;").replace(/>/g, "&gt;").replace(/</g, "&lt;").replace(/"/g, "&quot;")+'</h4><p id="comment-detail" class="m-0">'+$(form).find("textarea[name='content']").val().replace(/&/g, "&amp;").replace(/>/g, "&gt;").replace(/</g, "&lt;").replace(/"/g, "&quot;")+'</p></div>');
-                            $( "#success").html(res.message).slideDown( "slow" );
-                            setTimeout(function() {
-                            $( "#success").slideUp( "slow" );
-                            }, 5000);
-                        }else{
-                            $( "#error").html(res.message).slideDown( "slow" );
-                            setTimeout(function() {
-                            $( "#error").slideUp( "slow" );
-                            }, 5000);
-                        }
-
-                        form.reset();
-                    },
-                    error: function() {
-                        $( "#loader").hide();
-                        $( "#error").slideDown( "slow" );
-                        setTimeout(function() {
-                        $( "#error").slideUp( "slow" );
-                        }, 5000);
-                    }
-                });
+                // $.ajax({
+                //     type: "POST",
+                //     url: "/wish",
+                //     data: $(form).serialize(),
+                //     success: function (res) {
+                //         $( "#loader").hide();
+                //         if(!res.error){
+                //             $('#show-comments').scrollTop(0);
+                //             $('#show-comments').prepend('<div class="box-comment p-3 mb-3"><h4 id="user-name-comment">'+$(form).find("input[name='name']").val().replace(/&/g, "&amp;").replace(/>/g, "&gt;").replace(/</g, "&lt;").replace(/"/g, "&quot;")+'</h4><p id="comment-detail" class="m-0">'+$(form).find("textarea[name='content']").val().replace(/&/g, "&amp;").replace(/>/g, "&gt;").replace(/</g, "&lt;").replace(/"/g, "&quot;")+'</p></div>');
+                //             $( "#success").html(res.message).slideDown( "slow" );
+                //             setTimeout(function() {
+                //             $( "#success").slideUp( "slow" );
+                //             }, 5000);
+                //         }else{
+                //             $( "#error").html(res.message).slideDown( "slow" );
+                //             setTimeout(function() {
+                //             $( "#error").slideUp( "slow" );
+                //             }, 5000);
+                //         }
+                //
+                //         form.reset();
+                //     },
+                //     error: function() {
+                //         $( "#loader").hide();
+                //         $( "#error").slideDown( "slow" );
+                //         setTimeout(function() {
+                //         $( "#error").slideUp( "slow" );
+                //         }, 5000);
+                //     }
+                // });
                 return false;
             }
 
