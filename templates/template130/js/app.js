@@ -18,11 +18,13 @@ const add_data = document.getElementById("btn-submit-comment");
 function sendGreetings() {
     const name = document.getElementById("name-comment").value;
     const content = document.getElementById("content").value;
-    const newStudentRef = push(ref(db, "wedding"));
-    set(newStudentRef, {
-        name: name,
-        content: content,
-    });
+    if (name !== "" && content !== "") {
+        const newStudentRef = push(ref(db, "wedding"));
+        set(newStudentRef, {
+            name: name,
+            content: content,
+        });
+    }
     document.getElementById("name-comment").value = "";
     document.getElementById("content").value = "";
     ReadData();
